@@ -1,0 +1,1 @@
+# strandhaus-kampen-website
