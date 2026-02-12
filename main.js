@@ -17,8 +17,8 @@ const toggle = document.getElementById('navToggle');
 const links = document.getElementById('navLinks');
 const overlay = document.getElementById('navOverlay');
 
-function openMenu() { links.classList.add('open'); overlay.classList.add('visible'); }
-function closeMenu() { links.classList.remove('open'); overlay.classList.remove('visible'); }
+function openMenu() { links.classList.add('open'); overlay.classList.add('visible'); toggle.classList.add('open'); }
+function closeMenu() { links.classList.remove('open'); overlay.classList.remove('visible'); toggle.classList.remove('open'); }
 
 toggle.addEventListener('click', () => {
     links.classList.contains('open') ? closeMenu() : openMenu();

@@ -116,6 +116,8 @@ nav.scrolled .nav-links a:hover {
   padding: 5px;
   background: none;
   border: none;
+  position: relative;
+  z-index: 1001;
 }
 .nav-toggle span {
   display: block;
@@ -126,6 +128,18 @@ nav.scrolled .nav-links a:hover {
 }
 nav.scrolled .nav-toggle span {
   background: var(--deep-sea);
+}
+.nav-toggle.open span {
+  background: var(--deep-sea);
+}
+.nav-toggle.open span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+.nav-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.open span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
 }
 
 @media (max-width: 768px) {
@@ -329,7 +343,7 @@ nav.scrolled .nav-toggle span {
       180deg,
       rgba(26, 58, 74, 0.75) 0%,
       rgba(26, 58, 74, 0.35) 35%,
-      rgba(26, 58, 74, 0.45) 100%
+      rgba(26, 58, 74, 0.65) 100%
     );
   }
   .hero-content {
