@@ -1,0 +1,50 @@
+{
+  "heroImage": "img/hero.webp",
+  "aboutImages": [
+    { "src": "img/strandlaeufer/strandlaeufer_12.webp", "alt": "Strandläufer Wohnbereich", "tall": true },
+    { "src": "img/seeschwalbe/seeschwalbe_8.webp", "alt": "Seeschwalbe Detail" },
+    { "src": "img/silbermoewe/silbermoewe_21.webp", "alt": "Silbermöwe Schlafzimmer" }
+  ],
+  "units": [
+    {
+      "name": "Haus Uthspann",
+      "folder": "haus-uthspann",
+      "totalImages": 8,
+      "meta": "Hörnum · Sylt · 4 Ferienwohnungen",
+      "description": "Unser Ferienhaus in ruhiger, strandnaher Lage mit Terrasse, Strandkörben und Parkplätzen direkt am Haus.",
+      "tags": ["Terrasse", "Strandkörbe", "3 Parkplätze", "Fahrradstellplatz", "Grill"],
+      "hiddenTags": [],
+      "cta": { "label": "Kontakt aufnehmen", "href": "#kontakt" }
+    },
+    {
+      "name": "Strandläufer",
+      "folder": "strandlaeufer",
+      "totalImages": 33,
+      "meta": "Erdgeschoss · ca. 55 m² · 2 Personen",
+      "description": "Gemütliche Wohnung im Erdgeschoss mit direktem Zugang zur Terrasse und den Strandkörben.",
+      "tags": ["1 Schlafzimmer", "Terrasse", "WLAN", "Küche", "Strandkorb"],
+      "hiddenTags": ["Flachbild-TV", "Waschmaschine", "Geschirrspüler", "Fahrradstellplatz"],
+      "cta": { "label": "Verfügbarkeit prüfen", "href": "#" }
+    },
+    {
+      "name": "Seeschwalbe",
+      "folder": "seeschwalbe",
+      "totalImages": 26,
+      "meta": "Obergeschoss · ca. 60 m² · 2–4 Personen",
+      "description": "Helle Wohnung im Obergeschoss mit schönem Blick — komfortabel eingerichtet für erholsame Urlaubstage.",
+      "tags": ["2 Schlafzimmer", "Balkon", "WLAN", "Küche", "Kinderbett"],
+      "hiddenTags": ["Flachbild-TV", "Waschmaschine", "Geschirrspüler", "Fahrradstellplatz"],
+      "cta": { "label": "Verfügbarkeit prüfen", "href": "#" }
+    },
+    {
+      "name": "Silbermöwe",
+      "folder": "silbermoewe",
+      "totalImages": 38,
+      "meta": "Details folgen",
+      "description": "Weitere Details zu dieser Wohnung werden in Kürze ergänzt.",
+      "tags": ["1–4 Personen"],
+      "hiddenTags": [],
+      "cta": { "label": "Verfügbarkeit prüfen", "href": "#" }
+    }
+  ]
+}

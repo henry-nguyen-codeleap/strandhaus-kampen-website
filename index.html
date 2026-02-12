@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Haus Uthspann – Ferienwohnungen in Hörnum auf Sylt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/2.12.0/styles/overlayscrollbars.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ═══════ NAV OVERLAY (mobile) ═══════ -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- ═══════ NAVIGATION ═══════ -->
+    <nav id="navbar">
+      <a href="#" class="nav-logo">Haus Uthspann</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#ueber-uns">Über uns</a></li>
+        <li><a href="#wohnungen">Wohnungen</a></li>
+        <li><a href="#lage">Lage</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Menü">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- ═══════ HERO ═══════ -->
+    <section class="hero section-entrance">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <span class="hero-badge fade-up">Exklusiv auf Sylt</span>
+        <h1 class="fade-up">Urlaub am Meer erleben</h1>
+        <p class="hero-tagline fade-up">Entdecken Sie unser liebevoll eingerichtetes Ferienhaus direkt am Roten Kliff – Ihr persönlicher Rückzugsort an der Nordsee.</p>
+        <div class="hero-features fade-up">
+            <div class="hero-feature">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+                    <polyline points="9,22 9,12 15,12 15,22"/>
+                </svg>
+                <span>120 m² Wohnfläche</span>
+            </div>
+            <div class="hero-feature">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                    <path d="M16 3.13a4 4 0 010 7.75"/>
+                </svg>
+                <span>Bis zu 6 Gäste</span>
+            </div>
+            <div class="hero-feature">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12,6 12,12 16,14"/>
+                </svg>
+                <span>3 Min. zum Strand</span>
+            </div>
+        </div>
+        <a href="#wohnungen" class="hero-cta fade-up">
+          Wohnungen entdecken
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M5 12h14" />
+            <path d="M12 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+      <div class="hero-scroll">
+        <span>Entdecken</span>
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke-width="1.5"
+          stroke-linecap="round">
+          <path d="M7 10l5 5 5-5" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- ═══════ ABOUT ═══════ -->
+    <section class="about section-entrance" id="ueber-uns">
+      <div class="about-wrapper">
+        <div class="about-images fade-up" id="aboutImages"></div>
+        <div class="about-text fade-up">
+          <p class="about-tag">Willkommen</p>
+          <h2>Ihr Zuhause auf Sylt</h2>
+          <p>
+            Das Haus Uthspann liegt in einer ruhigen, strandnahen Lage in Hörnum
+            — dem südlichsten Ort auf Sylt. Vier modern und behaglich
+            ausgestattete Ferienwohnungen bieten Platz für 1–4 Personen und sind
+            ganzjährig verfügbar.
+          </p>
+          <p>
+            Genießen Sie die Terrasse mit Strandkörben, nutzen Sie die
+            abschließbaren Fahrradabstellmöglichkeiten und profitieren Sie von
+            den drei Parkplätzen direkt am Haus.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight">
+              <div class="highlight-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                  <polyline points="9 22 9 12 15 12 15 22" />
+                </svg>
+              </div>
+              <div>
+                <h4>4 Ferienwohnungen</h4>
+                <p>Für 1–4 Personen, komplett eingerichtet</p>
+              </div>
+            </div>
+            <div class="highlight">
+              <div class="highlight-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round">
+                  <circle cx="12" cy="12" r="3" />
+                  <path
+                    d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                </svg>
+              </div>
+              <div>
+                <h4>Terrasse &amp; Strandkörbe</h4>
+                <p>Gartenmöbel, Grillmöglichkeit</p>
+              </div>
+            </div>
+            <div class="highlight">
+              <div class="highlight-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round">
+                  <rect x="3" y="3" width="7" height="7" />
+                  <rect x="14" y="3" width="7" height="7" />
+                  <rect x="3" y="14" width="7" height="7" />
+                  <rect x="14" y="14" width="7" height="7" />
+                </svg>
+              </div>
+              <div>
+                <h4>Familienfreundlich</h4>
+                <p>Kinderbett, Kinderstühle, Bollerwagen</p>
+              </div>
+            </div>
+            <div class="highlight">
+              <div class="highlight-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round">
+                  <path
+                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+                </svg>
+              </div>
+              <div>
+                <h4>Direkt vom Eigentümer</h4>
+                <p>Persönlicher Service, keine Gebühren</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ═══════ UNITS ═══════ -->
+    <section class="units" id="wohnungen">
+      <div class="units-container">
+        <p class="units-tag">Unsere Wohnungen</p>
+        <h2 class="units-title">Vier Wohnungen, ein Zuhause</h2>
+
+        <div class="unit-tabs-wrap">
+          <div class="unit-tabs" id="unitTabs"></div>
+        </div>
+
+        <div class="unit-slider unit-entrance" id="unitSlider"></div>
+      </div>
+    </section>
+
+    <!-- ═══════ LIGHTBOX ═══════ -->
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-close">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke-width="2"
+          stroke-linecap="round">
+          <path d="M18 6L6 18M6 6l12 12" />
+        </svg>
+      </button>
+      <div class="lightbox-main">
+        <button class="lightbox-nav prev">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke-width="2"
+            stroke-linecap="round">
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </button>
+        <div class="lightbox-img-wrap" id="lightboxImgWrap"></div>
+        <button class="lightbox-nav next">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke-width="2"
+            stroke-linecap="round">
+            <path d="M9 18l6-6-6-6" />
+          </svg>
+        </button>
+      </div>
+      <div class="lightbox-counter" id="lightboxCounter">1 / 5</div>
+      <div class="lightbox-thumbstrip" id="lightboxThumbs"></div>
+    </div>
+    <!-- ═══════ LOCATION ═══════ -->
+    <section class="location section-entrance" id="lage">
+      <div class="location-wrapper">
+        <div class="location-info fade-up">
+          <p class="location-tag">Lage</p>
+          <h2>Hörnum — ganz im Süden</h2>
+          <p>
+            Das Haus Uthspann liegt in einer ruhigen Wohnstraße in Hörnum, dem
+            südlichsten Ort auf Sylt. Der Strand, das Ortszentrum und die
+            Bushaltestelle sind bequem zu Fuß erreichbar.
+          </p>
+          <div class="nearby-places">
+            <div class="nearby-place">
+              <span class="nearby-name">Strand (Weststrand)</span>
+              <span class="nearby-distance">ca. 800 m</span>
+            </div>
+            <div class="nearby-place">
+              <span class="nearby-name">Ortszentrum Hörnum</span>
+              <span class="nearby-distance">ca. 600 m</span>
+            </div>
+            <div class="nearby-place">
+              <span class="nearby-name">Hörnum Odde (Südspitze)</span>
+              <span class="nearby-distance">ca. 2 km</span>
+            </div>
+            <div class="nearby-place">
+              <span class="nearby-name">Bushaltestelle</span>
+              <span class="nearby-distance">ca. 300 m</span>
+            </div>
+            <div class="nearby-place">
+              <span class="nearby-name">Hafen Hörnum</span>
+              <span class="nearby-distance">ca. 1 km</span>
+            </div>
+          </div>
+        </div>
+        <div class="location-map fade-up">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4634.5!2d8.293!3d54.76!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b4015739db1e5b%3A0x4263df27bd176c!2sH%C3%B6rnum%20(Sylt)!5e0!3m2!1sde!2sde!4v1700000000000"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+    <!-- ═══════ CONTACT ═══════ -->
+    <section class="contact section-entrance" id="kontakt">
+      <div class="contact-wrapper">
+        <h2 class="fade-up">Haben Sie Fragen?</h2>
+        <p class="fade-up">
+          Wir freuen uns über Ihre Nachricht und helfen Ihnen gerne bei der
+          Planung Ihres Aufenthalts.
+        </p>
+        <div class="contact-methods fade-up">
+          <a href="tel:+494651889202" class="contact-method">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round">
+              <path
+                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+            </svg>
+            04651 – 88 92 02
+          </a>
+          <a href="mailto:suellwold-sylt@t-online.de" class="contact-method">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round">
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            suellwold-sylt@t-online.de
+          </a>
+        </div>
+        <div class="contact-address fade-up">
+          <p>Annegret Süllwold</p>
+          <p>Kressen-Jacobstal 16, 25997 Hörnum/Sylt</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ FOOTER ═══════ -->
+    <footer class="section-entrance">
+      <div class="footer-inner fade-up">
+        <div class="footer-col footer-brand">
+          <span class="footer-logo">Haus Uthspann</span>
+          <p>
+            Vier Ferienwohnungen in ruhiger, strandnaher Lage in Hörnum auf Sylt
+            — ganzjährig zu vermieten.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <ul>
+            <li><a href="#ueber-uns">Über uns</a></li>
+            <li><a href="#wohnungen">Wohnungen</a></li>
+            <li><a href="#lage">Lage</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Kontakt</h5>
+          <ul>
+            <li>Annegret Süllwold</li>
+            <li>Kressen-Jacobstal 16</li>
+            <li>25997 Hörnum/Sylt</li>
+            <li><a href="tel:+494651889202">04651 – 88 92 02</a></li>
+            <li>
+              <a href="mailto:suellwold-sylt@t-online.de"
+                >suellwold-sylt@t-online.de</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Rechtliches</h5>
+          <ul>
+            <li><a href="#">Impressum</a></li>
+            <li><a href="#">Datenschutz</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom fade-up">
+        <p>&copy; 2025 Haus Uthspann · Hörnum/Sylt</p>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/2.12.0/browser/overlayscrollbars.browser.es6.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
