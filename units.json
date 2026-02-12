@@ -7,11 +7,11 @@
   ],
   "units": [
     {
-      "name": "Haus Uthspann",
+      "name": "Strandhaus Kampen",
       "folder": "haus-uthspann",
       "totalImages": 8,
-      "meta": "Hörnum · Sylt · 4 Ferienwohnungen",
-      "description": "Unser Ferienhaus in ruhiger, strandnaher Lage mit Terrasse, Strandkörben und Parkplätzen direkt am Haus.",
+      "meta": "Kampen · Sylt · 4 Ferienwohnungen",
+      "description": "Unser Ferienhaus in exklusiver, strandnaher Lage mit Terrasse, Strandkörben und Parkplätzen direkt am Haus.",
       "tags": ["Terrasse", "Strandkörbe", "3 Parkplätze", "Fahrradstellplatz", "Grill"],
       "hiddenTags": [],
       "cta": { "label": "Kontakt aufnehmen", "href": "#kontakt" }

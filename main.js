@@ -39,7 +39,7 @@ fetch('units.json')
         initStickyTabs();
         initTabScrollShadows();
         initEntranceAnimations();
-        initOverlayScrollbars();
+        initThumbstripScroll();
     });
 
 // ── Hero image ──
@@ -89,7 +89,7 @@ function renderUnits(units) {
             gridHTML += `<div class="photo-grid-item" data-idx="${g}">`;
             gridHTML += `<img src="${src}" alt="">`;
             if (isLast) {
-                gridHTML += `<button class="photo-grid-more">Alle ${unit.totalImages} Fotos</button>`;
+                gridHTML += `<button class="photo-grid-more"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>+${unit.totalImages - gridCount} Fotos</button>`;
             }
             gridHTML += '</div>';
         }
@@ -101,7 +101,7 @@ function renderUnits(units) {
         mobileHTML += `<img src="${heroSrc}" alt="">`;
         mobileHTML += `<div class="photo-count-badge">`;
         mobileHTML += `<svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>`;
-        mobileHTML += `${unit.totalImages} Fotos</div></div>`;
+        mobileHTML += `+${unit.totalImages - 1} Fotos</div></div>`;
 
         // Info card
         let infoHTML = '<div class="unit-info-card"><div class="unit-info-main">';
@@ -204,14 +204,38 @@ function initEntranceAnimations() {
 }
 
 // ── OverlayScrollbars on dynamic elements ──
-function initOverlayScrollbars() {
-    const thumbstrip = document.getElementById('lightboxThumbs');
-    if (thumbstrip) {
-        OverlayScrollbars(thumbstrip, {
-            overflow: { x: 'scroll', y: 'hidden' },
-            scrollbars: { theme: 'os-theme-custom', autoHide: 'move', autoHideDelay: 800 }
-        });
+// (removed from thumbstrip — now using native scroll + shadows)
+
+// ── Thumbstrip scroll shadows & nav ──
+function initThumbstripScroll() {
+    const wrap = document.querySelector('.lightbox-thumbstrip-wrap');
+    const strip = document.getElementById('lightboxThumbs');
+    if (!wrap || !strip) return;
+
+    function updateShadows() {
+        const { scrollLeft, scrollWidth, clientWidth } = strip;
+        wrap.classList.toggle('shadow-left', scrollLeft > 2);
+        wrap.classList.toggle('shadow-right', scrollLeft + clientWidth < scrollWidth - 2);
     }
+
+    strip.addEventListener('scroll', updateShadows, { passive: true });
+
+    const prevBtn = wrap.querySelector('.thumbstrip-prev');
+    const nextBtn = wrap.querySelector('.thumbstrip-next');
+    const scrollAmount = 200;
+
+    prevBtn.addEventListener('click', () => {
+        strip.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+    nextBtn.addEventListener('click', () => {
+        strip.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+
+    // Update shadows whenever lightbox opens or image changes
+    const observer = new MutationObserver(() => {
+        setTimeout(updateShadows, 50);
+    });
+    observer.observe(strip, { childList: true });
 }
 
 // ── Lightbox ──
@@ -358,7 +382,9 @@ function initLightbox() {
     document.querySelectorAll('.photo-grid-more').forEach(btn => {
         btn.addEventListener('click', e => {
             e.stopPropagation();
-            openLightbox(btn.closest('.unit-content'), 0);
+            const panel = btn.closest('.unit-content');
+            const gridCount = panel.querySelectorAll('.photo-grid-item').length;
+            openLightbox(panel, gridCount - 1);
         });
     });
     // Mobile hero -> lightbox

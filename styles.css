@@ -686,22 +686,34 @@ nav.scrolled .nav-toggle span {
 }
 .photo-grid-more {
   position: absolute;
-  bottom: 0.75rem;
-  right: 0.75rem;
-  background: rgba(250, 250, 249, 0.92);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  padding: 0.35rem 0.8rem;
+  z-index: 2;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: none;
+  padding: 0;
   font-family: var(--font-body);
-  font-size: 0.68rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  color: var(--deep-sea);
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: #fff;
   cursor: pointer;
-  border-radius: 4px;
-  transition: background 0.2s;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: background 0.3s;
+}
+.photo-grid-more svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
 }
 .photo-grid-more:hover {
-  background: var(--white);
+  background: rgba(0, 0, 0, 0.6);
 }
 
 /* Mobile: single hero + badge */
@@ -1089,20 +1101,88 @@ nav.scrolled .nav-toggle span {
   letter-spacing: 0.06em;
   padding-bottom: 1rem;
 }
-.lightbox-thumbstrip {
-  display: flex;
-  gap: 6px;
-  padding: 0 2rem 1.5rem;
-  overflow-x: auto;
+.lightbox-thumbstrip-wrap {
+  position: relative;
+  width: fit-content;
+  max-width: 100vw;
+  margin-inline: auto;
+  overflow: hidden;
   transform: translateY(10px);
   opacity: 0;
   transition:
     opacity 0.3s ease 0.15s,
     transform 0.3s ease 0.15s;
 }
-.lightbox.open .lightbox-thumbstrip {
+.lightbox.open .lightbox-thumbstrip-wrap {
   transform: translateY(0);
   opacity: 1;
+}
+.lightbox-thumbstrip-wrap::before,
+.lightbox-thumbstrip-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4rem;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.lightbox-thumbstrip-wrap::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.85), transparent);
+}
+.lightbox-thumbstrip-wrap::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.85), transparent);
+}
+.lightbox-thumbstrip-wrap.shadow-left::before {
+  opacity: 1;
+}
+.lightbox-thumbstrip-wrap.shadow-right::after {
+  opacity: 1;
+}
+.thumbstrip-nav {
+  position: absolute;
+  top: calc(50% - 0.5rem);
+  transform: translateY(-50%);
+  z-index: 3;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.25rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.thumbstrip-nav svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+}
+.thumbstrip-prev {
+  left: 0.5rem;
+}
+.thumbstrip-next {
+  right: 0.5rem;
+}
+.lightbox-thumbstrip-wrap.shadow-left .thumbstrip-prev,
+.lightbox-thumbstrip-wrap.shadow-right .thumbstrip-next {
+  opacity: 0.8;
+}
+.thumbstrip-nav:hover {
+  opacity: 1;
+}
+.lightbox-thumbstrip {
+  display: flex;
+  gap: 6px;
+  padding: 0 2rem 1.5rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.lightbox-thumbstrip::-webkit-scrollbar {
+  display: none;
 }
 .lightbox-thumb {
   flex-shrink: 0;
@@ -1111,7 +1191,7 @@ nav.scrolled .nav-toggle span {
   background: rgba(255, 255, 255, 0.08);
   overflow: hidden;
   cursor: pointer;
-  opacity: 0.35;
+  opacity: 0.5;
   transition: opacity 0.2s;
   border: 2px solid transparent;
 }
