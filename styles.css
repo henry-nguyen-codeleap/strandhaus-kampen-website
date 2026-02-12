@@ -12,6 +12,22 @@
 
   --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-body: 'Outfit', -apple-system, sans-serif;
+
+  /* Layout */
+  --content-width: 1200px;
+  --section-px: 5%;
+
+  /* Typography */
+  --heading-size: clamp(2rem, 4vw, 2.8rem);
+  --tag-size: 0.72rem;
+  --tag-spacing: 0.22em;
+  --text-size: 0.95rem;
+
+  /* Translucent whites */
+  --white-05: rgba(255, 255, 255, 0.05);
+  --white-08: rgba(255, 255, 255, 0.08);
+  --white-18: rgba(255, 255, 255, 0.18);
+  --white-40: rgba(255, 255, 255, 0.4);
 }
 
 *,
@@ -42,7 +58,7 @@ nav {
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 1rem 5%;
+  padding: 1rem var(--section-px);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -192,7 +208,7 @@ nav.scrolled .nav-toggle span {
   min-height: 650px;
   display: flex;
   align-items: flex-end;
-  padding: 5%;
+  padding: var(--section-px);
   overflow: hidden;
 }
 
@@ -203,7 +219,7 @@ nav.scrolled .nav-toggle span {
     180deg,
     rgba(26, 58, 74, 0.75) 0%,
     rgba(26, 58, 74, 0.05) 35%,
-    rgba(26, 58, 74, 0.45) 100%
+    rgba(26, 58, 74, 0.65) 100%
   );
   background-size: cover;
   background-position: center 40%;
@@ -302,7 +318,7 @@ nav.scrolled .nav-toggle span {
 .hero-scroll {
   position: absolute;
   bottom: 2rem;
-  right: 5%;
+  right: var(--section-px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -364,7 +380,7 @@ nav.scrolled .nav-toggle span {
    ══════════════════════════════════════ */
 .about {
   background: var(--white);
-  padding: 6rem 5%;
+  padding: 6rem var(--section-px);
 }
 
 .about-wrapper {
@@ -372,7 +388,7 @@ nav.scrolled .nav-toggle span {
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
-  max-width: 1200px;
+  max-width: var(--content-width);
   margin: 0 auto;
 }
 
@@ -401,9 +417,9 @@ nav.scrolled .nav-toggle span {
 }
 
 .about-tag {
-  font-size: 0.72rem;
+  font-size: var(--tag-size);
   font-weight: 500;
-  letter-spacing: 0.22em;
+  letter-spacing: var(--tag-spacing);
   text-transform: uppercase;
   color: var(--coral);
   margin-bottom: 0.75rem;
@@ -411,7 +427,7 @@ nav.scrolled .nav-toggle span {
 
 .about-text h2 {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-size: var(--heading-size);
   font-weight: 400;
   color: var(--deep-sea);
   line-height: 1.15;
@@ -420,7 +436,7 @@ nav.scrolled .nav-toggle span {
 
 .about-text > p {
   color: var(--storm);
-  font-size: 0.95rem;
+  font-size: var(--text-size);
   margin-bottom: 1rem;
 }
 
@@ -478,7 +494,7 @@ nav.scrolled .nav-toggle span {
 }
 @media (max-width: 640px) {
   .about {
-    padding: 4rem 5%;
+    padding: 4rem var(--section-px);
   }
   .about-images {
     height: 280px;
@@ -494,7 +510,7 @@ nav.scrolled .nav-toggle span {
    ══════════════════════════════════════ */
 .units {
   background: var(--deep-sea);
-  padding: 5rem 5% 4rem;
+  padding: 5rem var(--section-px) 4rem;
   overflow: hidden;
   min-height: 100vh;
   display: flex;
@@ -506,21 +522,21 @@ nav.scrolled .nav-toggle span {
   }
 }
 .units-container {
-  max-width: 1200px;
+  max-width: var(--content-width);
   margin: 0 auto;
   width: 100%;
 }
 .units-tag {
-  font-size: 0.72rem;
+  font-size: var(--tag-size);
   font-weight: 500;
-  letter-spacing: 0.22em;
+  letter-spacing: var(--tag-spacing);
   text-transform: uppercase;
   color: var(--coral);
   margin-bottom: 0.75rem;
 }
 .units-title {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-size: var(--heading-size);
   font-weight: 400;
   color: var(--white);
   line-height: 1.15;
@@ -610,10 +626,10 @@ nav.scrolled .nav-toggle span {
     z-index: 50;
     background: var(--deep-sea);
     padding-top: 0.75rem;
-    margin-left: -5%;
-    margin-right: -5%;
-    padding-left: 5%;
-    padding-right: 5%;
+    margin-left: calc(-1 * var(--section-px));
+    margin-right: calc(-1 * var(--section-px));
+    padding-left: var(--section-px);
+    padding-right: var(--section-px);
     transition: box-shadow 0.2s;
   }
   .unit-tabs-wrap.stuck {
@@ -657,7 +673,7 @@ nav.scrolled .nav-toggle span {
   aspect-ratio: 5 / 2;
 }
 .photo-grid-item {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--white-05);
   overflow: hidden;
   cursor: pointer;
   position: relative;
@@ -732,7 +748,7 @@ nav.scrolled .nav-toggle span {
 .photo-hero-mobile .grid-ph {
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--white-05);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -989,7 +1005,7 @@ nav.scrolled .nav-toggle span {
   right: 1.25rem;
   width: 42px;
   height: 42px;
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--white-08);
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -1005,7 +1021,7 @@ nav.scrolled .nav-toggle span {
   stroke: #fff;
 }
 .lightbox-close:hover {
-  background: rgba(255, 255, 255, 0.18);
+  background: var(--white-18);
 }
 .lightbox-main {
   flex: 1;
@@ -1070,7 +1086,7 @@ nav.scrolled .nav-toggle span {
   transform: translateY(-50%);
   width: 44px;
   height: 44px;
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--white-08);
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -1085,7 +1101,7 @@ nav.scrolled .nav-toggle span {
   stroke: #fff;
 }
 .lightbox-nav:hover {
-  background: rgba(255, 255, 255, 0.18);
+  background: var(--white-18);
 }
 .lightbox-nav.prev {
   left: 1.5rem;
@@ -1094,7 +1110,7 @@ nav.scrolled .nav-toggle span {
   right: 1.5rem;
 }
 .lightbox-counter {
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--white-40);
   font-size: 0.78rem;
   font-weight: 400;
   letter-spacing: 0.06em;
@@ -1187,7 +1203,7 @@ nav.scrolled .nav-toggle span {
   flex-shrink: 0;
   width: 60px;
   height: 42px;
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--white-08);
   overflow: hidden;
   cursor: pointer;
   opacity: 0.5;
@@ -1224,27 +1240,27 @@ nav.scrolled .nav-toggle span {
    ══════════════════════════════════════ */
 .location {
   background: var(--white);
-  padding: 6rem 5%;
+  padding: 6rem var(--section-px);
 }
 .location-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
-  max-width: 1200px;
+  max-width: var(--content-width);
   margin: 0 auto;
   align-items: center;
 }
 .location-tag {
-  font-size: 0.72rem;
+  font-size: var(--tag-size);
   font-weight: 500;
-  letter-spacing: 0.22em;
+  letter-spacing: var(--tag-spacing);
   text-transform: uppercase;
   color: var(--coral);
   margin-bottom: 0.75rem;
 }
 .location-info h2 {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-size: var(--heading-size);
   font-weight: 400;
   color: var(--deep-sea);
   line-height: 1.15;
@@ -1252,7 +1268,7 @@ nav.scrolled .nav-toggle span {
 }
 .location-info > p {
   color: var(--storm);
-  font-size: 0.95rem;
+  font-size: var(--text-size);
   margin-bottom: 2rem;
 }
 .nearby-places {
@@ -1311,7 +1327,7 @@ nav.scrolled .nav-toggle span {
    ══════════════════════════════════════ */
 .contact {
   background: var(--deep-sea);
-  padding: 6rem 5%;
+  padding: 6rem var(--section-px);
   text-align: center;
 }
 .contact-wrapper {
@@ -1327,7 +1343,7 @@ nav.scrolled .nav-toggle span {
 }
 .contact-wrapper > p {
   color: rgba(255, 255, 255, 0.65);
-  font-size: 0.95rem;
+  font-size: var(--text-size);
   margin-bottom: 2.5rem;
 }
 .contact-methods {
@@ -1344,14 +1360,14 @@ nav.scrolled .nav-toggle span {
   color: var(--white);
   text-decoration: none;
   padding: 0.85rem 1.4rem;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid var(--white-18);
   border-radius: 100px;
   font-size: 0.88rem;
   transition: all 0.3s ease;
 }
 .contact-method:hover {
-  border-color: rgba(255, 255, 255, 0.4);
-  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--white-40);
+  background: var(--white-08);
 }
 .contact-method svg {
   width: 18px;
@@ -1372,16 +1388,16 @@ nav.scrolled .nav-toggle span {
    ══════════════════════════════════════ */
 footer {
   background: #132c38;
-  padding: 4rem 5% 1.5rem;
+  padding: 4rem var(--section-px) 1.5rem;
 }
 .footer-inner {
-  max-width: 1200px;
+  max-width: var(--content-width);
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr 1fr;
   gap: 3rem;
   padding-bottom: 3rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--white-08);
 }
 .footer-brand {
   max-width: 300px;
@@ -1412,11 +1428,11 @@ footer {
 }
 .footer-col ul li {
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--white-40);
   margin-bottom: 0.5rem;
 }
 .footer-col ul a {
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--white-40);
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -1424,7 +1440,7 @@ footer {
   color: rgba(255, 255, 255, 0.75);
 }
 .footer-bottom {
-  max-width: 1200px;
+  max-width: var(--content-width);
   margin: 0 auto;
   padding-top: 1.5rem;
 }
@@ -1465,4 +1481,26 @@ footer {
   --os-handle-border-radius: 4px;
   --os-padding-perpendicular: 2px;
   --os-padding-axis: 2px;
+}
+
+/* ══════════════════════════════════════
+   DISABLE HOVER ON TOUCH DEVICES
+   ══════════════════════════════════════ */
+@media (hover: none), (pointer: coarse) {
+  nav.scrolled .nav-links a:hover { color: var(--storm); }
+  .nav-links a:hover::after { width: 0; }
+  .hero-cta:hover { background: var(--white); transform: none; box-shadow: none; }
+  .hero-cta:hover svg { transform: none; }
+  .about-img:hover img { transform: none; }
+  .unit-tab:hover { color: rgba(255, 255, 255, 0.35); }
+  .photo-grid-item:hover img { transform: none; }
+  .photo-grid-more:hover { background: rgba(0, 0, 0, 0.45); }
+  .tags-toggle:hover { background: none; color: var(--coral); }
+  .unit-book:hover { background: var(--coral); transform: none; box-shadow: none; }
+  .lightbox-close:hover { background: var(--white-08); }
+  .lightbox-nav:hover { background: var(--white-08); }
+  .thumbstrip-nav:hover { opacity: 0; }
+  .lightbox-thumb:hover { opacity: 0.5; }
+  .contact-method:hover { border-color: var(--white-18); background: none; }
+  .footer-col ul a:hover { color: var(--white-40); }
 }
