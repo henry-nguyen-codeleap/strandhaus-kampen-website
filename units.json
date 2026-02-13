@@ -7,44 +7,44 @@
   ],
   "units": [
     {
-      "name": "Strandhaus Kampen",
-      "folder": "haus-uthspann",
-      "totalImages": 8,
-      "meta": "Kampen · Sylt · 4 Ferienwohnungen",
-      "description": "Unser Ferienhaus in exklusiver, strandnaher Lage mit Terrasse, Strandkörben und Parkplätzen direkt am Haus.",
-      "tags": ["Terrasse", "Strandkörbe", "3 Parkplätze", "Fahrradstellplatz", "Grill"],
-      "hiddenTags": [],
-      "cta": { "label": "Kontakt aufnehmen", "href": "#kontakt" }
-    },
-    {
       "name": "Strandläufer",
       "folder": "strandlaeufer",
       "totalImages": 33,
-      "meta": "Erdgeschoss · ca. 55 m² · 2 Personen",
-      "description": "Gemütliche Wohnung im Erdgeschoss mit direktem Zugang zur Terrasse und den Strandkörben.",
-      "tags": ["1 Schlafzimmer", "Terrasse", "WLAN", "Küche", "Strandkorb"],
-      "hiddenTags": ["Flachbild-TV", "Waschmaschine", "Geschirrspüler", "Fahrradstellplatz"],
-      "cta": { "label": "Verfügbarkeit prüfen", "href": "#" }
+      "meta": "Erdgeschoss · 70 m² · bis zu 4 Personen",
+      "description": "Großzügige Erdgeschosswohnung mit zwei Schlafzimmern, zwei Bädern und direktem Zugang zur Terrasse mit Strandkorb.",
+      "tags": ["2 Schlafzimmer", "2 Bäder", "Terrasse", "WLAN", "3 TVs"],
+      "hiddenTags": ["Geschirrspüler", "Backofen", "Waschmaschine", "E-Ladestation (11 kW)", "Hund erlaubt"],
+      "cta": { "label": "Auf Syltrundum ansehen", "href": "https://www.syltrundum.de/Sylt/Hoernum/U.-Strandlaeufer" }
     },
     {
       "name": "Seeschwalbe",
       "folder": "seeschwalbe",
       "totalImages": 26,
-      "meta": "Obergeschoss · ca. 60 m² · 2–4 Personen",
-      "description": "Helle Wohnung im Obergeschoss mit schönem Blick — komfortabel eingerichtet für erholsame Urlaubstage.",
-      "tags": ["2 Schlafzimmer", "Balkon", "WLAN", "Küche", "Kinderbett"],
-      "hiddenTags": ["Flachbild-TV", "Waschmaschine", "Geschirrspüler", "Fahrradstellplatz"],
-      "cta": { "label": "Verfügbarkeit prüfen", "href": "#" }
+      "meta": "1. OG + DG · 47 m² · bis zu 4 Personen",
+      "description": "Maisonette-Wohnung über zwei Etagen mit offenem Schlafbereich im Dachgeschoss — renoviert und neu eingerichtet.",
+      "tags": ["2 Schlafbereiche", "Terrasse", "WLAN", "Küche", "E-Ladestation"],
+      "hiddenTags": ["LED HD TV", "Geschirrspüler", "Waschmaschine", "Hund erlaubt"],
+      "cta": { "label": "Auf Syltrundum ansehen", "href": "https://www.syltrundum.de/Sylt/Hoernum/U.-Seeschwalbe" }
     },
     {
       "name": "Silbermöwe",
       "folder": "silbermoewe",
       "totalImages": 38,
-      "meta": "Details folgen",
-      "description": "Weitere Details zu dieser Wohnung werden in Kürze ergänzt.",
-      "tags": ["1–4 Personen"],
-      "hiddenTags": [],
-      "cta": { "label": "Verfügbarkeit prüfen", "href": "#" }
+      "meta": "1. OG + DG · 80 m² · bis zu 6 Personen",
+      "description": "Die größte Wohnung im Haus mit drei Schlafzimmern, zwei Bädern und Badewanne — ideal für Familien.",
+      "tags": ["3 Schlafzimmer", "2 Bäder", "Badewanne", "WLAN", "3 TVs"],
+      "hiddenTags": ["Geschirrspüler", "Backofen", "Waschmaschine", "E-Ladestation", "Hund erlaubt"],
+      "cta": { "label": "Auf Syltrundum ansehen", "href": "https://www.syltrundum.de/Sylt/Hoernum/U.-Silbermoewe" }
+    },
+    {
+      "name": "Kiebitz",
+      "folder": "kiebitz",
+      "totalImages": 0,
+      "meta": "Erdgeschoss · 30 m² · 2 Personen",
+      "description": "Gemütliche Wohnung im Erdgeschoss mit Schrankbett, geschlossener Küche und Zugang zur Terrasse.",
+      "tags": ["1 Schlafbereich", "Küche", "WLAN", "TV", "Strandkorb"],
+      "hiddenTags": ["Geschirrspüler", "Waschmaschine", "HiFi-Anlage", "Hund erlaubt"],
+      "cta": { "label": "Auf Syltrundum ansehen", "href": "https://www.syltrundum.de/Sylt/Hoernum/U.-Kiebitz" }
     }
   ]
 }

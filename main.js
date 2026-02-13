@@ -120,7 +120,8 @@ function renderUnits(units) {
         }
         infoHTML += '</div></div>';
         infoHTML += '<div class="unit-info-side">';
-        infoHTML += `<a href="${unit.cta.href}" class="unit-book">${unit.cta.label}`;
+        const isExternal = unit.cta.href.startsWith('http');
+        infoHTML += `<a href="${unit.cta.href}"${isExternal ? ' target="_blank" rel="noopener noreferrer"' : ''} class="unit-book">${unit.cta.label}`;
         infoHTML += `<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>`;
         infoHTML += '</a></div></div>';
 
